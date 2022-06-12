@@ -1,10 +1,20 @@
-counterfactual-prediction
-==============================
+# counterfactual-prediction
 
-Ou r take  on the counterfactual recognition task provided by SemEval 2020 Task 5.
+Our take on the counterfactual recognition task provided by SemEval 2020 Task 5.
 
-Project Organization
-------------
+## Subtask 1
+
+The code for our approach for Subtask 1 is organized as:
+
+- **notebooks/1_data_exploration_sp_v1.ipynb** : SVM baseline for the task as well as code for data loading, class imbalance exploration, and GloVe embedding coverage for the train data.
+- **notebooks/2_data_preprocessing_sp_v1.ipynb** : basic preprocessing of the data for transformers - lower casing, punctuation handling, etc.
+- **notebooks/3_counterfactual_transformers_sp_v1.ipynb** - training and testing transformers on our data (using huggingface)
+- **notebooks/3_counterfactual_transformers_sp_v2.ipynb** - weighted cross-entropy loss and false positive/negative visualization.
+- **notebooks/4_neurosymbolic_data_and_testing_sp_v1.ipynb** - data splitting for our neurosymbolic approach as well as code for testing our ensemble. training can be done using transformer training code.
+
+The detailed explanations of these approaches is given in our report located at **reports/report.pdf**.
+
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -51,7 +61,6 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-
---------
+---
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
